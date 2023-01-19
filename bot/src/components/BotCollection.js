@@ -14,21 +14,32 @@ function Home() {
 
   return (
 
-    <div>
+    <div className="row" style={{gap:"3%"}}>
 
         {
             bot.map(bot => {
                 return (
-                    
-              <div key={bot.name} className="card col-sm-1 p-0 m-1" style={{width: "18rem;"}}>
-              <img src={bot.avatar_url} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">{bot.name}</h5>
-                <h5 className="card-title">{bot.catchphrase}</h5>
 
-                
+          <div className="col-2 mb-4">
+                    
+          <div key={bot.name} className="row no-gutters" style={{width: "18rem;"}}>
+
+          <div className="row">
+            <div className="card p-0 m-1">
+
+              <div className="col md-3">
+              <img src={bot.avatar_url} className="card-img-top" alt="..." />
               </div>
-            </div> 
+              
+              <div className="card-body">
+                <h5 className="text-danger">{bot.name}</h5>
+                <p className="card-text-sm">{bot.catchphrase}</p> 
+                </div>
+                </div> 
+              </div> 
+         </div>
+
+      </div> 
                 )})  
         }
     

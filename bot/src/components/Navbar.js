@@ -1,25 +1,27 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return(
-    <div>
-          <nav className="navbar navbar-expand-lg bg-light">
-  <div className="container-fluid">
-    <h1>Bot Botllr</h1>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div className="navbar-nav">
-        <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
-        <NavLink className="nav-link" to="/bot">Details</NavLink>
-        
-      </div>
-    </div>
+  
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <Link class="nav-link" to ="/">BotCollection</Link>
+      </li>
+      <li class="nav-item active">
+      <Link class="nav-link" to ="/bots">YourBotArmy</Link>
+      </li> 
+    </ul>
+   
   </div>
 </nav>
-    </div>
+
+
   )
 }
 

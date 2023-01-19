@@ -1,23 +1,28 @@
 // import logo from './logo.svg';
-import {Routes, Route, Navigate} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import BotDetails from "./components/BotDetails";
+import BotCollection from './components/BotCollection';
+import YourBotArmy from "./components/YourBotArmy";
+
+
 
 function App() {
+  
   return (
     <div className="App">
+
       <Navbar/>
 
       <Routes>
-      <Route path="/" element={<Navigate to="/home"/>} />
-        <Route path="home" element={<Home/>}/>
-        <Route path="/bot" element={<BotDetails/>}/>
+    
+        <Route path="/" element={<BotCollection/>}/>
+        <Route path="/bots" element={<YourBotArmy/>}/>
+       
       </Routes>
 
      
-     <Home/>
+    
     </div>
   );
 }
