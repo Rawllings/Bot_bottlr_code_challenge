@@ -22,6 +22,16 @@ function YourBotArmy() {
     setArmy(filteredArmy);
   }
 
+  function deleteBot(id) {
+    fetch(`http://localhost:3001/bots/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((res) => res.json())
+    .then((data) => document.location.reload());
+  }
   
   return (
     <div>
@@ -62,15 +72,15 @@ function YourBotArmy() {
         <h1> Choose Your Favorite Bot Army</h1>
         {items.map((bot) => {
           return (
-            <div onClick={() =>renderYourArmy(bot.id)} className="col-2 mb-4">
+            <div className="col-2 mb-4">
               <div
                 key={bot.name}
                 className="row no-gutters"
                 style={{ width: "18rem;" }}
               >
                 <div className="row">
-                  <div className="card p-0 m-1">
-                    <div className="col md-3">
+                  <div   className="card p-0 m-1">
+                    <div onClick={() =>renderYourArmy(bot.id)}  className="col md-3">
                       <img
                         src={bot.avatar_url}
                         className="card-img-top"
@@ -81,13 +91,18 @@ function YourBotArmy() {
                     <div className="card-body">
                       <h5 className="text-danger">{bot.name}</h5>
                       <p className="card-text-sm">{bot.catchphrase}</p>
+                      
                     </div>
+                    <button onClick={() => deleteBot(bot.id)} className="btn btn-primary">Delete</button>
+
                   </div>
                 </div>
               </div>
             </div>
           );
+          
         })}
+       
       </div>
     </div>
   );
