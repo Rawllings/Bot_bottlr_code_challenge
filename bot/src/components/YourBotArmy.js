@@ -12,24 +12,29 @@ function YourBotArmy() {
 
   function renderYourArmy(id) {
     const item = items.find((item) => item.id === id);
-    const fav = army.find((item) => item.id === id);
-    fav ? alert("existing") : setArmy([...army, item]);
+    const favorite = army.find((item) => item.id === id);
+    favorite ? alert("existing") : setArmy([...army, item]);
+    console.log("helo")
   }
 
-  console.log(army);
+  function handleDelete(id) {
+    const filteredArmy = army.filter((item) => item.id !== id);
+    setArmy(filteredArmy);
+  }
 
+  
   return (
     <div>
-
       <div className="row" style={{ gap: "3%" }}>
         <h1> Your Favorite Bot Army</h1>
+
         {army.map((armies) => {
           return (
-            <div className="col-2 mb-4">
+            <div onClick={() => handleDelete(armies.id)} className="col-2 mb-4">
               <div
                 key={armies.name}
                 className="row no-gutters"
-                style={{ width: "18rem;" }}
+                style={{ width: "100%" }}
               >
                 <div className="row">
                   <div className="card p-0 m-1">
@@ -43,7 +48,7 @@ function YourBotArmy() {
 
                     <div className="card-body">
                       <h5 className="text-danger">{armies.name}</h5>
-                      <p className="card-text-sm">{armies.catchphrase}</p>
+                      <p className="card-text">{armies.catchphrase}</p>
                     </div>
                   </div>
                 </div>
@@ -57,7 +62,7 @@ function YourBotArmy() {
         <h1> Choose Your Favorite Bot Army</h1>
         {items.map((bot) => {
           return (
-            <div onClick={renderYourArmy} className="col-2 mb-4">
+            <div onClick={() =>renderYourArmy(bot.id)} className="col-2 mb-4">
               <div
                 key={bot.name}
                 className="row no-gutters"
