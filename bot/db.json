@@ -745,18 +745,6 @@
       "updated_at": "2018-10-02T19:55:12.006Z"
     },
     {
-      "id": 167,
-      "name": "S-96",
-      "health": 84,
-      "damage": 29,
-      "armor": 77,
-      "bot_class": "Support",
-      "catchphrase": "0101001000001101000110010001011010000001100",
-      "avatar_url": "https://robohash.org/aperiamautemconsectetur.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:12.017Z",
-      "updated_at": "2018-10-02T19:55:12.017Z"
-    },
-    {
       "id": 168,
       "name": "Ar-02",
       "health": 76,
@@ -791,18 +779,6 @@
       "avatar_url": "https://robohash.org/inearumrerum.png?size=300x300&set=set1",
       "created_at": "2018-10-02T19:55:12.072Z",
       "updated_at": "2018-10-02T19:55:12.072Z"
-    },
-    {
-      "id": 171,
-      "name": "`ux-06",
-      "health": 49,
-      "damage": 100,
-      "armor": 35,
-      "bot_class": "Assault",
-      "catchphrase": "0010011110010110000100111001100111011001",
-      "avatar_url": "https://robohash.org/inventoreisteut.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:12.090Z",
-      "updated_at": "2018-10-02T19:55:12.090Z"
     },
     {
       "id": 172,
@@ -851,18 +827,6 @@
       "avatar_url": "https://robohash.org/sedincidunteos.png?size=300x300&set=set1",
       "created_at": "2018-10-02T19:55:12.149Z",
       "updated_at": "2018-10-02T19:55:12.149Z"
-    },
-    {
-      "id": 176,
-      "name": "tL-53",
-      "health": 65,
-      "damage": 100,
-      "armor": 25,
-      "bot_class": "Assault",
-      "catchphrase": "110001010000010100100110001001010010011",
-      "avatar_url": "https://robohash.org/eosquasiblanditiis.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:12.162Z",
-      "updated_at": "2018-10-02T19:55:12.162Z"
     },
     {
       "id": 177,
