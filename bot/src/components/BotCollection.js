@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import FilterBot from "./FilterBot";
 import { Link } from "react-router-dom";
 
 function BotCollection({ handleFilterChange }) {
   const [bot, setBot] = useState([]);
+  const [botClass, setBotClass] = useState("all");
 
   useEffect(() => {
     fetch("http://localhost:3001/bots")
@@ -10,10 +12,21 @@ function BotCollection({ handleFilterChange }) {
       .then((handleFilterChange) => setBot(handleFilterChange));
   }, []);
 
-  const sortedHealth = bot.sort((a, b) => (a.health > b.health ? -1 : 1));
+  const filteredBots = bot.filter((filtbot) => {
+    if (botClass === "all") {
+      return true;
+    } else {
+      return filtbot.bot_class === botClass;
+    }
+  });
+
+  const sortedHealth = [...filteredBots].sort((a, b) =>
+    a.health > b.health ? -1 : 1
+  );
 
   return (
     <>
+      <FilterBot botClass={botClass} setBotClass={setBotClass} />
       <div className="row " style={{ gap: "3%" }}>
         {" "}
         {sortedHealth.map((bot) => {
@@ -90,17 +103,15 @@ function BotCollection({ handleFilterChange }) {
                         >
                           <span className="text-danger">
                             <i class="fa-solid fa-bolt-lightning"></i>
-                          </span>{" "}
+                          </span>
                           {bot.damage}
                         </p>
                       </div>
                     </div>
                     <button className="btn btn-primary">
-                      {" "}
                       <Link className="text-white" to={`/post/${bot.id}`}>
-                        {" "}
                         Details
-                      </Link>{" "}
+                      </Link>
                     </button>
                   </div>
                 </div>

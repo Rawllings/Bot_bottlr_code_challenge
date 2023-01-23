@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
 
 function BotDetails({ bots }) {
-  const { param } = useParams();
+  const param = useParams();
+  console.log(param.id);
 
   return (
     <>
-      <h1>Bot {param} </h1>
+      <h1>Bot {param.id} </h1>
 
       <div class="card mb-3">
         <div className="row g-0">
