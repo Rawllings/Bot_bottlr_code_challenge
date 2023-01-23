@@ -22,14 +22,37 @@ function App() {
 
   const sortedHealth = bot.sort((a, b) => (a.health > b.health ? -1 : 1));
 
+  const sortedList = sortedHealth.map((Details, index) => {
+    return (
+      <div className="card-body" key={index}>
+        <h5 className="card-title">{Details.name}</h5>
+        <p className="card-text">
+          <small className="text-muted">{Details.health}</small>
+        </p>
+        <p className="card-text">
+          <small className="text-muted">{Details.damage}</small>
+        </p>
+        <p className="card-text">
+          <small className="text-muted">{Details.armor}</small>
+        </p>
+        <p className="card-text">
+          <small className="text-muted">{Details.bot_class}</small>
+        </p>
+        <p className="card-text">
+          <small className="text-muted">{Details.catchphrase}</small>
+        </p>
+      </div>
+    );
+  });
+
   return (
     <div className="App">
       <Navbar />
       <FilterBot />
 
       <Routes>
-        <Route path="/" element={<BotCollection bots={sortedHealth} />} />
-        <Route path="/bots/:id" element={<BotDetails />} />
+        <Route path="/" element={<BotCollection />} />
+        <Route path="/bots/:id" element={<BotDetails bots={sortedList} />} />
         <Route path="/bots" element={<YourBotArmy />} />
       </Routes>
     </div>

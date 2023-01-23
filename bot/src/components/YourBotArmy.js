@@ -49,8 +49,8 @@ function YourBotArmy() {
                 style={{ width: "100%" }}
               >
                 <div className="row">
-                  <div className="card p-0 m-1">
-                    <div className="col md-3">
+                  <div className="card p-0 m-1 border border-primary shadow p-3 mb-5 bg-body rounded">
+                    <div className="col md-3 ">
                       <img
                         src={armies.avatar_url}
                         className="card-img-top"
@@ -144,7 +144,7 @@ function YourBotArmy() {
                 style={{ width: "18rem;" }}
               >
                 <div className="row">
-                  <div className="card p-0 m-1">
+                  <div className="card p-0 m-1 border border-primary shadow p-3 mb-5 bg-body rounded">
                     <div
                       onClick={() => renderYourArmy(bot.id)}
                       className="col md-3"

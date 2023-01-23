@@ -14,18 +14,18 @@ function BotCollection({ handleFilterChange }) {
 
   return (
     <>
-      <div className="row" style={{ gap: "3%" }}>
+      <div className="row " style={{ gap: "3%" }}>
         {" "}
         {sortedHealth.map((bot) => {
           return (
-            <div className="col-2 mb-4" onChange={handleFilterChange}>
+            <div className="col-2 mb-4 " onChange={handleFilterChange}>
               <div
                 key={bot.name}
                 className="row no-gutters"
                 style={{ width: "18rem;" }}
               >
-                <div className="row">
-                  <div className="card p-0 m-1">
+                <div className="row ">
+                  <div className="card p-0 m-1 border border-primary shadow p-3 mb-5 bg-body rounded">
                     <div className="col md-3">
                       <img
                         src={bot.avatar_url}
@@ -99,9 +99,8 @@ function BotCollection({ handleFilterChange }) {
                       {" "}
                       <Link className="text-white" to={`/post/${bot.id}`}>
                         {" "}
-                        ViewPost
+                        Details
                       </Link>{" "}
-                      Details
                     </button>
                   </div>
                 </div>
