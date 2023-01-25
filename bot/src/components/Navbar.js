@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <Link class="nav-link" to="/">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <Link className="nav-link" to="/">
               BotCollection
             </Link>
           </li>
-          <li class="nav-item active">
-            <Link class="nav-link" to="/bots">
+          <li className="nav-item active">
+            <Link className="nav-link" to="/bots">
               YourBotArmy
             </Link>
           </li>

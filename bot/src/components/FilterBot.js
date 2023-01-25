@@ -11,10 +11,9 @@ function FilterBot({ botClass, setBotClass }) {
       className="form-select"
       aria-label="Default select example"
       onChange={filterBotClass}
+      defaultValue={"all"}
     >
-      <option selected value="all">
-        All
-      </option>
+      <option value="all">All</option>
       <option value="Defender">Defender</option>
       <option value="Support">Support</option>
       <option value="Assault">Assault</option>

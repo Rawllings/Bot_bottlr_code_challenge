@@ -109,7 +109,7 @@ function BotCollection({ handleFilterChange }) {
                       </div>
                     </div>
                     <button className="btn btn-primary">
-                      <Link className="text-white" to={`/post/${bot.id}`}>
+                      <Link className="text-white" to={`/bots/${bot.id}`}>
                         Details
                       </Link>
                     </button>
